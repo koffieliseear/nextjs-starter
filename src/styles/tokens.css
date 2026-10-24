@@ -1,0 +1,68 @@
+/*
+ * Tokens de design du projet.
+ *
+ * Ce fichier applique les décisions de DESIGN.md. Les valeurs ci-dessous sont
+ * neutres : remplace-les au début de chaque projet.
+ *
+ * Chaque token devient une classe Tailwind :
+ *   --color-accent    → bg-accent, text-accent, border-accent…
+ *   --font-display    → font-display
+ *   --radius-card     → rounded-card
+ *   --shadow-card     → shadow-card
+ *   --container-content → max-w-content
+ *   --container-reading → max-w-reading
+ *
+ * La palette de couleurs par défaut de Tailwind est désactivée
+ * (--color-*: initial) : seules les couleurs du projet existent, ce qui
+ * empêche les valeurs « au hasard » comme bg-blue-500.
+ */
+
+@theme {
+  /* Couleurs ------------------------------------------------------------ */
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-bg: #ffffff; /* fond de page */
+  --color-surface: #f5f5f4; /* fonds secondaires : cartes, sections */
+  --color-fg: #1c1917; /* texte principal */
+  --color-muted: #57534e; /* texte secondaire */
+  --color-border: #e7e5e4; /* bordures, séparateurs */
+  --color-accent: #1d4ed8; /* couleur d'action : boutons, liens */
+  --color-accent-hover: #1e40af;
+  --color-accent-fg: #ffffff; /* texte posé sur l'accent */
+
+  /* Typographie --------------------------------------------------------- */
+  /* --font-body et --font-heading viennent de src/lib/fonts.ts */
+  --font-sans: var(--font-body, ui-sans-serif, system-ui, sans-serif);
+  --font-display: var(
+    --font-heading,
+    var(--font-body, ui-sans-serif, system-ui, sans-serif)
+  );
+
+  /* Formes --------------------------------------------------------------- */
+  --radius-button: 0.375rem;
+  --radius-card: 0.5rem;
+  --radius-media: 0.5rem;
+
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.06);
+
+  /* Mise en page --------------------------------------------------------- */
+  --container-content: 72rem; /* largeur max du contenu */
+  --container-reading: 42rem; /* largeur max d'un texte long */
+}
+
+/*
+ * Mode sombre : désactivé par défaut. Si DESIGN.md le prévoit, décommente
+ * ce bloc et ajuste les valeurs. Les classes Tailwind suivent automatiquement.
+ *
+ * @media (prefers-color-scheme: dark) {
+ *   :root {
+ *     --color-bg: #0c0a09;
+ *     --color-surface: #1c1917;
+ *     --color-fg: #f5f5f4;
+ *     --color-muted: #a8a29e;
+ *     --color-border: #292524;
+ *   }
+ * }
+ */
