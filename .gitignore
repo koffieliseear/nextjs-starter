@@ -40,3 +40,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# inspirations de design : captures appartenant à leurs auteurs (voir design/README.md)
+# Les notes .md restent versionnées. Supprime ces lignes si le dépôt est privé
+# et que tu veux partager les captures.
+/design/**/*.png
+/design/**/*.jpg
+/design/**/*.jpeg
+/design/**/*.webp
+/design/**/*.avif
+/design/**/*.gif
+/design/**/*.svg
+/design/**/*.mp4
+/design/**/*.mov
+/design/**/*.webm
+/design/**/*.pdf
